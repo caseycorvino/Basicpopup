@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDA38B511D5569EA00C84D77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA38B501D5569EA00C84D77 /* AppDelegate.swift */; };
+		CDA38B531D5569EA00C84D77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA38B521D5569EA00C84D77 /* ViewController.swift */; };
+		CDA38B561D5569EA00C84D77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA38B541D5569EA00C84D77 /* Main.storyboard */; };
+		CDA38B591D5569EA00C84D77 /* BasicPopUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CDA38B571D5569EA00C84D77 /* BasicPopUp.xcdatamodeld */; };
+		CDA38B5B1D5569EA00C84D77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA38B5A1D5569EA00C84D77 /* Assets.xcassets */; };
+		CDA38B5E1D5569EA00C84D77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA38B5C1D5569EA00C84D77 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CDA38B4D1D5569EA00C84D77 /* BasicPopUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicPopUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA38B501D5569EA00C84D77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDA38B521D5569EA00C84D77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDA38B551D5569EA00C84D77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDA38B581D5569EA00C84D77 /* BasicPopUp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BasicPopUp.xcdatamodel; sourceTree = "<group>"; };
+		CDA38B5A1D5569EA00C84D77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDA38B5D1D5569EA00C84D77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDA38B5F1D5569EA00C84D77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDA38B4A1D5569EA00C84D77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDA38B441D5569EA00C84D77 = {
+			isa = PBXGroup;
+			children = (
+				CDA38B4F1D5569EA00C84D77 /* BasicPopUp */,
+				CDA38B4E1D5569EA00C84D77 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDA38B4E1D5569EA00C84D77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDA38B4D1D5569EA00C84D77 /* BasicPopUp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDA38B4F1D5569EA00C84D77 /* BasicPopUp */ = {
+			isa = PBXGroup;
+			children = (
+				CDA38B501D5569EA00C84D77 /* AppDelegate.swift */,
+				CDA38B521D5569EA00C84D77 /* ViewController.swift */,
+				CDA38B541D5569EA00C84D77 /* Main.storyboard */,
+				CDA38B5A1D5569EA00C84D77 /* Assets.xcassets */,
+				CDA38B5C1D5569EA00C84D77 /* LaunchScreen.storyboard */,
+				CDA38B5F1D5569EA00C84D77 /* Info.plist */,
+				CDA38B571D5569EA00C84D77 /* BasicPopUp.xcdatamodeld */,
+			);
+			path = BasicPopUp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDA38B4C1D5569EA00C84D77 /* BasicPopUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA38B621D5569EA00C84D77 /* Build configuration list for PBXNativeTarget "BasicPopUp" */;
+			buildPhases = (
+				CDA38B491D5569EA00C84D77 /* Sources */,
+				CDA38B4A1D5569EA00C84D77 /* Frameworks */,
+				CDA38B4B1D5569EA00C84D77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasicPopUp;
+			productName = BasicPopUp;
+			productReference = CDA38B4D1D5569EA00C84D77 /* BasicPopUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDA38B451D5569EA00C84D77 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = caseycorvino;
+				TargetAttributes = {
+					CDA38B4C1D5569EA00C84D77 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = CDA38B481D5569EA00C84D77 /* Build configuration list for PBXProject "BasicPopUp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDA38B441D5569EA00C84D77;
+			productRefGroup = CDA38B4E1D5569EA00C84D77 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDA38B4C1D5569EA00C84D77 /* BasicPopUp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDA38B4B1D5569EA00C84D77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA38B5E1D5569EA00C84D77 /* LaunchScreen.storyboard in Resources */,
+				CDA38B5B1D5569EA00C84D77 /* Assets.xcassets in Resources */,
+				CDA38B561D5569EA00C84D77 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDA38B491D5569EA00C84D77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA38B531D5569EA00C84D77 /* ViewController.swift in Sources */,
+				CDA38B511D5569EA00C84D77 /* AppDelegate.swift in Sources */,
+				CDA38B591D5569EA00C84D77 /* BasicPopUp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CDA38B541D5569EA00C84D77 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDA38B551D5569EA00C84D77 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDA38B5C1D5569EA00C84D77 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDA38B5D1D5569EA00C84D77 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDA38B601D5569EA00C84D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDA38B611D5569EA00C84D77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDA38B631D5569EA00C84D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BasicPopUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.caseycorvino.BasicPopUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CDA38B641D5569EA00C84D77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BasicPopUp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.caseycorvino.BasicPopUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDA38B481D5569EA00C84D77 /* Build configuration list for PBXProject "BasicPopUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA38B601D5569EA00C84D77 /* Debug */,
+				CDA38B611D5569EA00C84D77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA38B621D5569EA00C84D77 /* Build configuration list for PBXNativeTarget "BasicPopUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA38B631D5569EA00C84D77 /* Debug */,
+				CDA38B641D5569EA00C84D77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CDA38B571D5569EA00C84D77 /* BasicPopUp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CDA38B581D5569EA00C84D77 /* BasicPopUp.xcdatamodel */,
+			);
+			currentVersion = CDA38B581D5569EA00C84D77 /* BasicPopUp.xcdatamodel */;
+			path = BasicPopUp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CDA38B451D5569EA00C84D77 /* Project object */;
+}
