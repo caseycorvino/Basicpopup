@@ -114,15 +114,7 @@ class ViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDeleg
         
         self.map.showsUserLocation = true
         
-        //let currentLocation = MKPointAnnotation()
         
-        /*
-         currentLocation.coordinate = location
-         
-         currentLocation.subtitle = "current location"
-         
-         map.addAnnotation(currentLocation)
-         */
     }
     
     

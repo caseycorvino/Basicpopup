@@ -14,8 +14,7 @@ import CoreLocation
 
 
 
-class AddPopUpViewController:UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
-{
+class AddPopUpViewController:UIViewController{
 
 
     @IBOutlet var popUpTitle: UITextField!
@@ -51,30 +50,51 @@ class AddPopUpViewController:UIViewController, CLLocationManagerDelegate, MKMapV
         let popUpAddressString = popUpAddress.text
         
         
-        
+       isValidTitle(popUpTitleString!)
+           
+        isValidLengthAddress(popUpAddressString!)
        
         
+        let geocoder: CLGeocoder = CLGeocoder()
         
-        
-        if isValidTitle(popUpTitleString!) && isValidLengthAddress(popUpAddressString!)        {
-        
-            let newPopUp = popUp(popUpTitle: popUpTitleString!, popUpAddress: popUpAddressString!)
-        
-            popUps.append(newPopUp)
-        
-        
-            performSegueWithIdentifier("back", sender: nil)
-        
-            //print(popUps.count)
-        
+        if isValidTitle(popUpTitleString!) && isValidLengthAddress(popUpAddressString!){
+        geocoder.geocodeAddressString(popUpAddressString!)  { (placemark, error) in
+            
+            if error != nil {
+                
+                print("Not valid address")
+                
+                self.warning2.text = "Not valid address"
+                
+            }
+            else {
+                
+                    let newPopUp = popUp(popUpTitle: popUpTitleString!, popUpAddress: popUpAddressString!)
+                    
+                    popUps.append(newPopUp)
+                    
+                    
+                    self.performSegueWithIdentifier("back", sender: nil)
+                    
+                    //print(popUps.count)
+                    
+                
+            }
         }
+        }
+        
+
     
         
     }
     
     func isValidTitle(newTitle: String) -> Bool{
         
+        
+        
         if newTitle.characters.count > 3 {
+            
+            warning.text = ""
             
             return true
         
@@ -85,78 +105,13 @@ class AddPopUpViewController:UIViewController, CLLocationManagerDelegate, MKMapV
             return false
         }
     }
-    
-//    func isValidLengthAddress(newAddress: String) -> Bool{
-//        
-//        typealias CompletionHandler = (success:Bool) -> Void
-//        
-//        func checkIfItIsValid(newAddress: String,completionHandler: CompletionHandler) -> Bool{
-//             let geocoder: CLGeocoder = CLGeocoder()
-//            geocoder.geocodeAddressString(newAddress)  { (placemark, error) in
-//                
-//                            if error != nil {
-//                
-//                                    print("Not valid address")
-//                                
-//                            }
-//                
-//                        }
-//
-//            let flag = true // true if download succeed,false otherwise
-//            
-//            completionHandler(success: flag)
-//        }
-//        
-//        // How to use it.
-//        
-//        checkIfItIsValid(newAddress, completionHandler: { (success) -> Bool in
-//            
-//            // When download completes,control flow goes here.
-//            if success {
-//                
-//                return true
-//                
-//            } else {
-//                
-//            }
-//        })
-//        
-//        
-//        return false
-//        
-//    }
+
     
     func isValidLengthAddress(newAddress: String) -> Bool {
-        
-        
-         let geocoder: CLGeocoder = CLGeocoder()
-
-        
-        
-        
-        
-        geocoder.geocodeAddressString(newAddress)  { (placemark, error) in
-            
-            if error != nil {
-                
-                print("Not valid address")
-                
-            }
-            else{
-                
-            }
-        }
-        
-       
-    
-//        if state == "false" {
-//            
-//            print( "false")
-//            warning2.text = "Not valid address"
-//            return false;
-//        }
 
         if newAddress.characters.count > 8 {
+            
+            warning2.text = ""
             
             return true
             
@@ -171,24 +126,7 @@ class AddPopUpViewController:UIViewController, CLLocationManagerDelegate, MKMapV
     
     }
     
-//    func isValidAddress(newAddress: String) -> Bool {
-//        
-//        let geocoder: CLGeocoder = CLGeocoder()
-//        
-//        var st = true
-//        geocoder.geocodeAddressString(newAddress, completionHandler: { (placemark, error) in
-//            if(error != nil)
-//            {
-//                st = false
-//                //return false
-//                print("not valid address")
-//            }
-//        })
-//        
-//        return st
-//        
-//        
-//    }
+
     /*
     // MARK: - Navigation
 

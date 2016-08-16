@@ -49,10 +49,12 @@ class popUp{
         
     }
     
+
     func getPopUpLat() -> CLLocationDegrees {
         
         return popUpLat
-    
+        
+        
     }
     
     func getPopUpLon() -> CLLocationDegrees {
@@ -61,20 +63,71 @@ class popUp{
         
     }
     
-    //setters
     
-    func setPopUpLat(lat: CLLocationDegrees){
+    //setter
+    
+    func setDetails(newAddress: String) -> Void {
         
-        popUpLat = lat
+        
+        let geocoder: CLGeocoder = CLGeocoder()
+                geocoder.geocodeAddressString(newAddress, completionHandler: { (placemarks, error) in
+                    if(error != nil)
+                    {
+                        print("not valid address")
+                    } else {
+                        
+                            let p = CLPlacemark(placemark: placemarks![0])
+                        
+                            var lat: CLLocationDegrees = 0
+                        
+                            var lon: CLLocationDegrees = 0
+                        
+                        
+                            var subThoroughFare:String = ""
+                            var thoroughFare:String = ""
+                            var subLocality:String = ""
+                        
+                            var newAddress = ""
+                        
+                        
+                        if p.location?.coordinate.latitude != nil{
+                            
+                            lat = (p.location?.coordinate.latitude)!
+                            
+                        }
+                        
+                        if p.location?.coordinate.longitude != nil{
+                            
+                            lon = (p.location?.coordinate.longitude)!
+                            
+                        }
+                        
+                        
+                        if (p.subThoroughfare != nil){
+                            
+                            subThoroughFare = p.subThoroughfare!
+                        }
+                        
+                        if (p.thoroughfare != nil){
+                            
+                            thoroughFare = p.thoroughfare!
+                        }
+                        if (p.subLocality != nil){
+                            
+                            subLocality = p.subLocality!
+                        }
+
+                        self.popUpLon = lon
+                        self.popUpLat = lat
+                        
+                        newAddress = "\(subThoroughFare) \(thoroughFare), \(subLocality)"
+                        self.popUpAddress = newAddress
+                        
+                        
+                    }
+                })
+
         
     }
-    
-    func setPopUpLan(lan: CLLocationDegrees){
-        
-        popUpLon = lan
-        
-    }
-    
-    
     
 }

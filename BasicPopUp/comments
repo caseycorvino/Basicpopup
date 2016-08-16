@@ -1,0 +1,93 @@
+***ViewController****
+
+
+*func locationManager*
+
+//let currentLocation = MKPointAnnotation()
+
+/*
+currentLocation.coordinate = location
+
+currentLocation.subtitle = "current location"
+
+map.addAnnotation(currentLocation)
+*/
+
+
+
+
+***AddPopUp***
+
+
+//    func isValidLengthAddress(newAddress: String) -> Bool{
+//
+//        typealias CompletionHandler = (success:Bool) -> Void
+//
+//        func checkIfItIsValid(newAddress: String,completionHandler: CompletionHandler) -> Bool{
+//             let geocoder: CLGeocoder = CLGeocoder()
+//            geocoder.geocodeAddressString(newAddress)  { (placemark, error) in
+//
+//                            if error != nil {
+//
+//                                    print("Not valid address")
+//
+//                            }
+//
+//                        }
+//
+//            let flag = true // true if download succeed,false otherwise
+//
+//            completionHandler(success: flag)
+//        }
+//
+//        // How to use it.
+//
+//        checkIfItIsValid(newAddress, completionHandler: { (success) -> Bool in
+//
+//            // When download completes,control flow goes here.
+//            if success {
+//
+//                return true
+//
+//            } else {
+//
+//            }
+//        })
+//
+//
+//        return false
+//
+//    }
+
+
+//    func isValidAddress(newAddress: String) -> Bool {
+//
+//        let geocoder: CLGeocoder = CLGeocoder()
+//
+//        var st = true
+//        geocoder.geocodeAddressString(newAddress, completionHandler: { (placemark, error) in
+//            if(error != nil)
+//            {
+//                st = false
+//                //return false
+//                print("not valid address")
+//            }
+//        })
+//
+//        return st
+//
+//
+//    }
+
+//        if isValidTitle(popUpTitleString!) && isValidLengthAddress(popUpAddressString!)        {
+//
+//            let newPopUp = popUp(popUpTitle: popUpTitleString!, popUpAddress: popUpAddressString!)
+//
+//            popUps.append(newPopUp)
+//
+//
+//            performSegueWithIdentifier("back", sender: nil)
+//
+//            //print(popUps.count)
+//
+//        }
