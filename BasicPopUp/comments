@@ -13,7 +13,27 @@ currentLocation.subtitle = "current location"
 map.addAnnotation(currentLocation)
 */
 
-
+//        p.setDetails(p.getPopUpAddress())
+//
+//        sleep(1)
+//
+//        let lat = p.getPopUpLat()
+//
+//        let lon = p.getPopUpLon()
+//
+//        let newCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+//
+//        let annotation = MKPointAnnotation()
+//
+//        annotation.coordinate = newCoordinate
+//
+//        annotation.title = p.getPopUpTitle()
+//
+//        annotation.subtitle = p.getPopUpAddress()
+//
+//        map.addAnnotation(annotation)
+//
+//        print("\(lat) \(lon)" )
 
 
 ***AddPopUp***

@@ -42,8 +42,7 @@ class ViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDeleg
         sleep(1)
         
         locationManager.stopUpdatingLocation()
-        
-        
+       
         
         
         //end of setup
@@ -54,7 +53,7 @@ class ViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDeleg
     
     @IBAction func updateButton(sender: AnyObject) {
         updateLocation()
-        //updatePopUps()
+        updatePopUps()
         
         
         
@@ -81,7 +80,117 @@ class ViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDeleg
     
     func updatePopUps(){
         
-        //get the PopUps in the area 3 miles
+        //get the PopUps in the area x miles. x is how far the user is willing to go. for example, the user will choose a shorter distance in nyc than la
+        for i in 0 ..< popUps.count{
+            let p = popUps[i]
+            //create annotations
+            createAnnotation(p)
+            
+        }
+        
+        
+    }
+    
+    func createAnnotation(p: popUp){
+        
+
+        
+        let title = p.getPopUpTitle()
+        
+        
+        
+        let geocoder: CLGeocoder = CLGeocoder()
+        geocoder.geocodeAddressString(p.getPopUpAddress(), completionHandler: { (placemarks, error) in
+            if(error != nil)
+            {
+               //print("not valid address")
+            } else {
+                
+                let p = CLPlacemark(placemark: placemarks![0])
+                
+                var lat: CLLocationDegrees = 0
+                
+                var lon: CLLocationDegrees = 0
+                
+                
+                var subThoroughFare:String = ""
+                var thoroughFare:String = ""
+                var locality:String = ""
+                
+                var newAddress = ""
+                
+                
+                if p.location?.coordinate.latitude != nil{
+                    
+                    lat = (p.location?.coordinate.latitude)!
+                    
+                    //print(lat)
+                    
+                }
+                
+                if p.location?.coordinate.longitude != nil{
+                    
+                    lon = (p.location?.coordinate.longitude)!
+                    //print(lon)
+                    
+                }
+                
+                
+                if (p.subThoroughfare != nil){
+                    
+                    subThoroughFare = p.subThoroughfare!
+                }
+                
+                if (p.thoroughfare != nil){
+                    
+                    thoroughFare = p.thoroughfare!
+                }
+                if (p.locality != nil){
+                    
+                    locality = p.locality!
+                }
+                
+                if thoroughFare != "" && subThoroughFare != "" {
+                    
+                    newAddress = "\(subThoroughFare) \(thoroughFare), \(locality)"
+                
+                } else if thoroughFare != ""{
+                    
+                    newAddress = "\(thoroughFare), \(locality)"
+                    
+                
+                } else {
+                    
+                    newAddress = "\(locality)"
+                
+                }
+                
+                let newCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+                
+                //print(lat)
+                //print(lon)
+                
+                        let annotation = MKPointAnnotation()
+                
+                        annotation.coordinate = newCoordinate
+                
+                        annotation.title = title
+                
+                        annotation.subtitle = newAddress
+                        
+                        self.map.addAnnotation(annotation)
+
+                
+            }
+        })
+        
+        
+        
+        
+        
+        
+        
+        
         
     }
     
@@ -91,7 +200,7 @@ class ViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDeleg
         //print(locations)
         
         deleteAllAnnotations()//deleteAllPopUps() too
-        
+        updatePopUps()
         
         
         let userLocation: CLLocation = locations[0]
@@ -100,9 +209,9 @@ class ViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDeleg
         
         let longitude = userLocation.coordinate.longitude
         
-        let latDelta:CLLocationDegrees = 0.1; //zoom
+        let latDelta:CLLocationDegrees = 0.2; //zoom
         
-        let lonDelta:CLLocationDegrees = 0.1; //zoom
+        let lonDelta:CLLocationDegrees = 0.2; //zoom
         
         let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta); //map span using zooms
         
